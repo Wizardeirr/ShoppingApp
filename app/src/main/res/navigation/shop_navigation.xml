@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_navigation"
+    app:startDestination="@id/shoppingListFragment">
+
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.volkankelleci.shoppingapp.shoppinglist.ShoppingListFragment"
+        android:label="fragment_shopping_list"
+        tools:layout="@layout/fragment_shopping_list" >
+        <action
+            android:id="@+id/action_shoppingListFragment_to_historyListFragment"
+            app:destination="@id/historyListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyListFragment"
+        android:name="com.volkankelleci.shoppingapp.historylist.HistoryListFragment"
+        android:label="fragment_history_list"
+        tools:layout="@layout/fragment_history_list" >
+        <action
+            android:id="@+id/action_historyListFragment_to_historyShopFragment"
+            app:destination="@id/historyShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyShopFragment"
+        android:name="com.volkankelleci.shoppingapp.historyshop.HistoryShopFragment"
+        android:label="fragment_history_shop"
+        tools:layout="@layout/fragment_history_shop" />
+</navigation>
